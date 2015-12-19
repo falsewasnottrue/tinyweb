@@ -12,7 +12,7 @@ public class HttpResponse {
         return responseCode;
     }
 
-    private HttpResponse(Builder builder) {
+    private HttpResponse(final Builder builder) {
         body = builder.body;
         responseCode = builder.responseCode;
     }
@@ -21,12 +21,12 @@ public class HttpResponse {
         private String body;
         private Integer responseCode;
 
-        public Builder body(String body) {
+        public Builder body(final String body) {
             this.body = body;
             return this;
         }
 
-        public Builder responseCode(Integer responseCode) {
+        public Builder responseCode(final Integer responseCode) {
             this.responseCode = responseCode;
             return this;
         }
