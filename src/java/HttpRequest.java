@@ -71,7 +71,7 @@ public class HttpRequest {
             for (String name : headers.keySet()) {
                 builder.addHeader(name, headers.get(name));
             }
-            
+
             return builder;
         }
     }
