@@ -1,4 +1,4 @@
-package java;
+package javaimpl;
 
 public class HttpResponse {
     private final String body;

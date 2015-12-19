@@ -1,4 +1,4 @@
-package java;
+package javaimpl;
 
 public class RenderingException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package java;
+package javaimpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -43,7 +43,7 @@ public class HttpRequest {
 
         public Builder addHeader(final String name, final String value) {
             if (headers == null) {
-                this.headers = new HashMap<String, String>();
+                this.headers = new HashMap<>();
             }
             headers.put(name, value);
             return this;
