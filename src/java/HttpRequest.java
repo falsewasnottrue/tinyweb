@@ -20,7 +20,7 @@ public class HttpRequest {
         return headers;
     }
 
-    private HttpRequest(Builder builder) {
+    private HttpRequest(final Builder builder) {
         this.body = builder.body;
         this.path = builder.path;
         this.headers = builder.headers;
@@ -31,22 +31,17 @@ public class HttpRequest {
         private String path;
         private Map<String, String> headers;
 
-        public Builder body(String body) {
+        public Builder body(final String body) {
             this.body = body;
             return this;
         }
 
-        public Builder path(String path) {
+        public Builder path(final String path) {
             this.path = path;
             return this;
         }
 
-        public Builder headers(Map<String, String> headers) {
-            this.headers = headers;
-            return this;
-        }
-
-        public Builder addHeader(String name, String value) {
+        public Builder addHeader(final String name, final String value) {
             if (headers == null) {
                 this.headers = new HashMap<String, String>();
             }
@@ -62,7 +57,7 @@ public class HttpRequest {
             return new Builder();
         }
 
-        public static Builder builderFrom(HttpRequest request) {
+        public static Builder builderFrom(final HttpRequest request) {
             Builder builder = new Builder();
             builder.body(request.getBody());
             builder.path(request.getPath());
